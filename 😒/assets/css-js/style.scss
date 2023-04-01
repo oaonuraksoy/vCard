@@ -1,38 +1,85 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+$color: #ecf0f1;
+$font-size-lg: 16pt;
+$font-size-md: 13pt;
+$border-width: 2px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $color;
+  text-decoration: none;
+  list-style: none;
+
 }
 
-.container{
-    display: flex;
-    justify-content: center; /* İçeriği yatayda ortalar */
-    align-items: center; /* İçeriği dikeyde ortalar */
-    height: 100vh;
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: .5rem 0 0 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
 
-.cardBody{
-    max-width: 650px;
-    border: 2px solid yellow;
-    display: flex;
-    justify-content: center; /* İçeriği yatayda ortalar */
-    align-items: center;
-    flex-direction: column;
+.cardBody {
+  max-width: 650px;
+  height: 100vh;
+  //border: $border-width solid yellow;
+  background-color: #2c3e50;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  overflow: hidden;
+  h1 {
+    font-size: $font-size-lg;
+  }
 
+  h2 {
+    font-size: $font-size-md;
+  }
 
-    .avatar{
-        width: 200px;
-        height: 200px;
-        border-radius: 200px;
-        border: 2px red solid;
-        overflow: hidden;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+  .avatar {
+   width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: $border-width solid red;
+    overflow: hidden;
 
-   
-            
-        }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
+  }
 }
+
+li {
+  margin: .5rem;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  background-color: #2980b9;
+  border-radius: .7rem;
+
+  .img {
+   // border: 1px solid black;
+    display: flex;
+    justify-content: center;
+  }
+
+  .textGroup {
+   // border: $border-width solid yellow;
+  }
+}
+
+.maps {
+  width: 100%;
+  height: 100%;
 }
